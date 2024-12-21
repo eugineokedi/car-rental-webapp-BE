@@ -11,10 +11,20 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Cloudinary imports
+# import Cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
+# from cloudinary.utils import cloudinary_url
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -25,7 +35,7 @@ SECRET_KEY = "django-insecure-b=*l4e_d_iv-ep=ja%yo4xpmgz05ccwl(g93n^sl9nr8_j$w^m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -37,6 +47,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "payments",
+    "rental",
+    "users",
+    "cars",
+    "cloudinary",
+    "anymail",
 ]
 
 MIDDLEWARE = [
@@ -121,3 +137,47 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Cloudinary configuration
+
+# cloudinary.config(
+#     cloud_name = os.getenv("CLOUDINARY_CLOUD_NAME"),
+#     api_key = os.getenv("CLOUDINARY_API_KEY"),
+#     api_secret = os.getenv("CLOUDINARY_API_SECRET_KEY"),
+#     secure = True,
+# )
+
+# # Upload an image
+# upload_result = cloudinary.uploader.upload(
+#     "path/to/your/image.jpg"
+# )
+# print("Uploaded Image URL:", upload_result["secure_url"])
+
+# # Optimize delivery by resizing and applying auto-format and auto-quality
+# optimize_url, _ = cloudinary_url(
+#     upload_result["public_id"],
+#     transformation=[
+#         {"width": 500, "crop": "scale", "quality": "auto", "fetch_format": "auto"}
+#     ],
+# )
+# print("Optimized URL:", optimize_url)
+
+# # Transform the image: resize to square and crop
+# auto_crop_url, _ = cloudinary_url(
+#     upload_result["public_id"],
+#     transformation=[
+#         {"width": 300, "height": 300, "crop": "fill", "gravity": "auto"}
+#     ],
+# )
+
+# print("Auto-Cropped URL:", auto_crop_url)
+
+# # SMTP email configuration
+# EMAIL_BACKEND = os.getenv("SMTP_EMAIL_BACKEND")
+# EMAIL_HOST = os.getenv("SMTP_EMAIL_HOST")
+# EMAIL_PORT = os.getenv("SMTP_EMAIL_PORT")
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = os.getenv("SMTP_EMAIL_HOST_USER")
+# EMAIL_HOST_PASSWORD = os.getenv("SMTP_EMAIL_HOST_PASSWORD")
+# DEFAULT_FROM_EMAIL = os.getenv("EMAIL_DEFAULT_FROM_EMAIL")
+

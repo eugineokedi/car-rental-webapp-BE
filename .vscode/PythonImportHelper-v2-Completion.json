@@ -104,11 +104,11 @@
         "documentation": {}
     },
     {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
+        "label": "CloudinaryField",
+        "importPath": "cloudinary.models",
+        "description": "cloudinary.models",
         "isExtraImport": true,
-        "detail": "django.test",
+        "detail": "cloudinary.models",
         "documentation": {}
     },
     {
@@ -133,6 +133,62 @@
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -193,11 +249,20 @@
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "car_rental",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "car_rental",
+        "description": "car_rental",
+        "detail": "car_rental",
         "documentation": {}
     },
     {
@@ -227,6 +292,33 @@
         "documentation": {}
     },
     {
+        "label": "Car",
+        "kind": 6,
+        "importPath": "cars.models",
+        "description": "cars.models",
+        "peekOfCode": "class Car(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField()\n    date_created = models.DateTimeField(auto_now_add=True)\n    image = CloudinaryField('image')",
+        "detail": "cars.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "cars.urls",
+        "description": "cars.urls",
+        "peekOfCode": "urlpatterns = [\n    path(),\n]",
+        "detail": "cars.urls",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "cars.views",
+        "description": "cars.views",
+        "peekOfCode": "def index(request):\n    car_images = Car.objects.all()\n    cloudinary_img = {\"car_images\": car_images}\n    return render(request, 'index.html', cloudinary_img=cloudinary_img)",
+        "detail": "cars.views",
+        "documentation": {}
+    },
+    {
         "label": "application",
         "kind": 5,
         "importPath": "car_rental.asgi",
@@ -240,7 +332,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = \"django-insecure-b=*l4e_d_iv-ep=ja%yo4xpmgz05ccwl(g93n^sl9nr8_j$w^m\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Cloudinary imports\n# import Cloudinary\n# import cloudinary.uploader\n# import cloudinary.api\n# from cloudinary.utils import cloudinary_url\n# Load environment variables from .env file\nload_dotenv()\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -249,7 +341,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "SECRET_KEY = \"django-insecure-b=*l4e_d_iv-ep=ja%yo4xpmgz05ccwl(g93n^sl9nr8_j$w^m\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "peekOfCode": "SECRET_KEY = \"django-insecure-b=*l4e_d_iv-ep=ja%yo4xpmgz05ccwl(g93n^sl9nr8_j$w^m\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -258,7 +350,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -267,7 +359,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n]",
+        "peekOfCode": "ALLOWED_HOSTS = ['.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"payments\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -276,7 +368,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n]\nMIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"payments\",\n    \"rental\",\n    \"users\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -348,7 +440,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Cloudinary configuration",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -357,7 +449,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Cloudinary configuration\n# cloudinary.config(",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -366,7 +458,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Cloudinary configuration\n# cloudinary.config(\n#     cloud_name = os.getenv(\"CLOUDINARY_CLOUD_NAME\"),",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -375,7 +467,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Cloudinary configuration\n# cloudinary.config(\n#     cloud_name = os.getenv(\"CLOUDINARY_CLOUD_NAME\"),\n#     api_key = os.getenv(\"CLOUDINARY_API_KEY\"),\n#     api_secret = os.getenv(\"CLOUDINARY_API_SECRET_KEY\"),\n#     secure = True,",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -384,7 +476,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Cloudinary configuration\n# cloudinary.config(\n#     cloud_name = os.getenv(\"CLOUDINARY_CLOUD_NAME\"),\n#     api_key = os.getenv(\"CLOUDINARY_API_KEY\"),\n#     api_secret = os.getenv(\"CLOUDINARY_API_SECRET_KEY\"),\n#     secure = True,\n# )\n# # Upload an image\n# upload_result = cloudinary.uploader.upload(",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -393,7 +485,7 @@
         "kind": 5,
         "importPath": "car_rental.urls",
         "description": "car_rental.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(car_rental.urls)),\n]",
         "detail": "car_rental.urls",
         "documentation": {}
     },
@@ -402,7 +494,16 @@
         "kind": 5,
         "importPath": "car_rental.wsgi",
         "description": "car_rental.wsgi",
-        "peekOfCode": "application = get_wsgi_application()",
+        "peekOfCode": "application = get_wsgi_application()\napp = application",
+        "detail": "car_rental.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "car_rental.wsgi",
+        "description": "car_rental.wsgi",
+        "peekOfCode": "app = application",
         "detail": "car_rental.wsgi",
         "documentation": {}
     },
@@ -416,6 +517,15 @@
         "documentation": {}
     },
     {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "payments.urls",
+        "description": "payments.urls",
+        "peekOfCode": "urlpatterns = [\n    path(),\n]",
+        "detail": "payments.urls",
+        "documentation": {}
+    },
+    {
         "label": "RentalConfig",
         "kind": 6,
         "importPath": "rental.apps",
@@ -425,12 +535,30 @@
         "documentation": {}
     },
     {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "rental.urls",
+        "description": "rental.urls",
+        "peekOfCode": "urlpatterns = [\n    path(),\n]",
+        "detail": "rental.urls",
+        "documentation": {}
+    },
+    {
         "label": "UsersConfig",
         "kind": 6,
         "importPath": "users.apps",
         "description": "users.apps",
         "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"users\"",
         "detail": "users.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "users.urls",
+        "description": "users.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"index/\", views.index, name=\"home\"),\n]",
+        "detail": "users.urls",
         "documentation": {}
     },
     {
