@@ -608,7 +608,7 @@
         "kind": 6,
         "importPath": "rental.models",
         "description": "rental.models",
-        "peekOfCode": "class Rental(models.Model):\n    # Relationship\n    car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    booking_date = models.DateTimeField(auto_now_add=True)\n    # Rental cost\n    daily_rate = models.DecimalField(max_digits=10, decimal_places=2)",
+        "peekOfCode": "class Rental(models.Model):\n    # Relationship\n    car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    actual_return_date = models.DateField(null=True, blank=True)\n    booking_date = models.DateTimeField(auto_now_add=True)\n    # Rental cost",
         "detail": "rental.models",
         "documentation": {}
     },
@@ -617,7 +617,7 @@
         "kind": 5,
         "importPath": "rental.models",
         "description": "rental.models",
-        "peekOfCode": "User = get_user_model()\n# Create your models here.\nclass Rental(models.Model):\n    # Relationship\n    car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    booking_date = models.DateTimeField(auto_now_add=True)",
+        "peekOfCode": "User = get_user_model()\n# Create your models here.\nclass Rental(models.Model):\n    # Relationship\n    car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    actual_return_date = models.DateField(null=True, blank=True)",
         "detail": "rental.models",
         "documentation": {}
     },
