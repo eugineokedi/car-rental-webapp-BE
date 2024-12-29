@@ -104,15 +104,15 @@
         "documentation": {}
     },
     {
-        "label": "CloudinaryField",
-        "importPath": "cloudinary.models",
-        "description": "cloudinary.models",
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "cloudinary.models",
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
-        "label": "serializers",
+        "label": "generics",
         "importPath": "rest_framework",
         "description": "rest_framework",
         "isExtraImport": true,
@@ -208,30 +208,6 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -295,6 +271,22 @@
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -410,16 +402,25 @@
         "kind": 5,
         "importPath": "cars.urls",
         "description": "cars.urls",
-        "peekOfCode": "urlpatterns = [\n    path(),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('car_list/', views.CarList.as_view(), name=\"car_list\"),\n    path('car_detail/', views.CarDetails.as_view(), name=\"car_detail\"),\n]",
         "detail": "cars.urls",
         "documentation": {}
     },
     {
-        "label": "index",
-        "kind": 2,
+        "label": "CarList",
+        "kind": 6,
         "importPath": "cars.views",
         "description": "cars.views",
-        "peekOfCode": "def index(request):\n    car_images = Car.objects.all()\n    cloudinary_img = {\"car_images\": car_images}\n    return render(request, 'index.html', cloudinary_img=cloudinary_img)",
+        "peekOfCode": "class CarList(generics.ListCreateAPIView):\n    queryset = Car.objects.all()\n    serializer_class = CarSerializer\nclass CarDetails(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Car.objects.all()\n    serializer_class = CarSerializer",
+        "detail": "cars.views",
+        "documentation": {}
+    },
+    {
+        "label": "CarDetails",
+        "kind": 6,
+        "importPath": "cars.views",
+        "description": "cars.views",
+        "peekOfCode": "class CarDetails(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Car.objects.all()\n    serializer_class = CarSerializer",
         "detail": "cars.views",
         "documentation": {}
     },
