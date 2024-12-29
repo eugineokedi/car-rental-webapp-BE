@@ -12,3 +12,6 @@ class Car(models.Model):
     image = models.ImageField()
     date_created = models.DateTimeField(auto_now_add=True)
     
+    def __str__(self):
+        return f'<{self.car_brand}, {self.car_model}, {self.year}, {self.registration_number}, {self.description}, {self.image}>'
+    

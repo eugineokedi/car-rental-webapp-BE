@@ -112,6 +112,30 @@
         "documentation": {}
     },
     {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -298,22 +322,6 @@
         "documentation": {}
     },
     {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "status",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
         "label": "TokenObtainPairView",
         "importPath": "rest_framework_simplejwt.views",
         "description": "rest_framework_simplejwt.views",
@@ -384,8 +392,17 @@
         "kind": 6,
         "importPath": "cars.models",
         "description": "cars.models",
-        "peekOfCode": "class Car(models.Model):\n    car_brand = models.CharField(max_length=100)\n    car_model = models.CharField(max_length=255)\n    year = name = models.CharField(max_length=100)\n    registration_number = models.CharField(max_length=100)\n    description = models.TextField()\n    image = models.ImageField()\n    date_created = models.DateTimeField(auto_now_add=True)",
+        "peekOfCode": "class Car(models.Model):\n    car_brand = models.CharField(max_length=100)\n    car_model = models.CharField(max_length=255)\n    year = name = models.CharField(max_length=100)\n    registration_number = models.CharField(max_length=100)\n    description = models.TextField()\n    image = models.ImageField()\n    date_created = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f'<{self.car_brand}, {self.car_model}, {self.year}, {self.registration_number}, {self.description}, {self.image}>'",
         "detail": "cars.models",
+        "documentation": {}
+    },
+    {
+        "label": "CarSerializer",
+        "kind": 6,
+        "importPath": "cars.serializers",
+        "description": "cars.serializers",
+        "peekOfCode": "class CarSerializer(serializers.ModelSerializer):\n    class meta:\n        model = Car\n        field = '__all__'",
+        "detail": "cars.serializers",
         "documentation": {}
     },
     {
