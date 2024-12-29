@@ -233,6 +233,14 @@
         "documentation": {}
     },
     {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "users.serializers",
         "description": "users.serializers",
@@ -271,6 +279,14 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -592,7 +608,16 @@
         "kind": 6,
         "importPath": "rental.models",
         "description": "rental.models",
-        "peekOfCode": "class Rental(models.Model):\n    pass",
+        "peekOfCode": "class Rental(models.Model):\n    # Relationship\n    car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    booking_date = models.DateTimeField(auto_now_add=True)\n    # Rental cost\n    daily_rate = models.DecimalField(max_digits=10, decimal_places=2)",
+        "detail": "rental.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "rental.models",
+        "description": "rental.models",
+        "peekOfCode": "User = get_user_model()\n# Create your models here.\nclass Rental(models.Model):\n    # Relationship\n    car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    booking_date = models.DateTimeField(auto_now_add=True)",
         "detail": "rental.models",
         "documentation": {}
     },
