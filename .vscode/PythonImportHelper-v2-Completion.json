@@ -112,6 +112,14 @@
         "documentation": {}
     },
     {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -263,6 +271,14 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Rental",
+        "importPath": "rental.models",
+        "description": "rental.models",
+        "isExtraImport": true,
+        "detail": "rental.models",
         "documentation": {}
     },
     {
@@ -569,6 +585,24 @@
         "description": "rental.apps",
         "peekOfCode": "class RentalConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"rental\"",
         "detail": "rental.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Rental",
+        "kind": 6,
+        "importPath": "rental.models",
+        "description": "rental.models",
+        "peekOfCode": "class Rental(models.Model):\n    pass",
+        "detail": "rental.models",
+        "documentation": {}
+    },
+    {
+        "label": "RentalSerializer",
+        "kind": 6,
+        "importPath": "rental.serializers",
+        "description": "rental.serializers",
+        "peekOfCode": "class RentalSerializer(serializers.ModelSerializer):\n    class meta:\n        models = Rental\n        fields = '__all__'",
+        "detail": "rental.serializers",
         "documentation": {}
     },
     {
