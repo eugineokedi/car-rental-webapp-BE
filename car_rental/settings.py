@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+from datetime import timedelta
+from users.serializers import User
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,8 +37,7 @@ SECRET_KEY = "django-insecure-b=*l4e_d_iv-ep=ja%yo4xpmgz05ccwl(g93n^sl9nr8_j$w^m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
-
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -51,9 +52,22 @@ INSTALLED_APPS = [
     "rental",
     "users",
     "cars",
-    "cloudinary",
-    "anymail",
+    "rest_framework",
+    "rest_framework_simplejwt",
 ]
+
+AUTH_USER_MODEL = 'users.User'
+
+
+# REST framework default authentication configuration
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -180,4 +194,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # EMAIL_HOST_USER = os.getenv("SMTP_EMAIL_HOST_USER")
 # EMAIL_HOST_PASSWORD = os.getenv("SMTP_EMAIL_HOST_PASSWORD")
 # DEFAULT_FROM_EMAIL = os.getenv("EMAIL_DEFAULT_FROM_EMAIL")
+
+# JWT settings
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': os.getenv('JWT_ACCESS_TOKEN_LIFETIME'),
+    'REFRESH_TOKEN_LIFETIME': os.getenv('JWT_REFRESH_TOKEN_LIFETIME'),
+    'ROTATE_REFRESH_TOKENS': os.getenv('JWT_ROTATE_REFRESH_TOKENS'),
+    'BLACKLIST_AFTER_ROTATION': os.getenv('JWT_BLACKLIST_AFTER_ROTATION'),
+    'AUTH_HEADER_TYPES': os.getenv('JWT_AUTH_HEADER_TYPES'),
+}
 

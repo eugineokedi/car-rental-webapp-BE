@@ -160,14 +160,6 @@
         "documentation": {}
     },
     {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -189,14 +181,6 @@
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -257,12 +241,28 @@
         "documentation": {}
     },
     {
-        "label": "car_rental",
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.serializers",
+        "description": "users.serializers",
+        "isExtraImport": true,
+        "detail": "users.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "car_rental,",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "car_rental",
-        "description": "car_rental",
-        "detail": "car_rental",
+        "importPath": "car_rental.",
+        "description": "car_rental.",
+        "detail": "car_rental.",
         "documentation": {}
     },
     {
@@ -271,6 +271,94 @@
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractBaseUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionsMixin",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenRefreshView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "RefreshToken",
+        "importPath": "rest_framework_simplejwt.tokens",
+        "description": "rest_framework_simplejwt.tokens",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.tokens",
         "documentation": {}
     },
     {
@@ -296,7 +384,7 @@
         "kind": 6,
         "importPath": "cars.models",
         "description": "cars.models",
-        "peekOfCode": "class Car(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField()\n    date_created = models.DateTimeField(auto_now_add=True)\n    image = CloudinaryField('image')",
+        "peekOfCode": "class Car(models.Model):\n    car_brand = models.CharField(max_length=100)\n    car_model = models.CharField(max_length=255)\n    year = name = models.CharField(max_length=100)\n    registration_number = models.CharField(max_length=100)\n    description = models.TextField()\n    image = models.ImageField()\n    date_created = models.DateTimeField(auto_now_add=True)",
         "detail": "cars.models",
         "documentation": {}
     },
@@ -341,7 +429,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "SECRET_KEY = \"django-insecure-b=*l4e_d_iv-ep=ja%yo4xpmgz05ccwl(g93n^sl9nr8_j$w^m\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "peekOfCode": "SECRET_KEY = \"django-insecure-b=*l4e_d_iv-ep=ja%yo4xpmgz05ccwl(g93n^sl9nr8_j$w^m\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -350,7 +438,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -359,7 +447,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"payments\",",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"payments\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -369,6 +457,24 @@
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
         "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"payments\",\n    \"rental\",\n    \"users\",",
+        "detail": "car_rental.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "car_rental.settings",
+        "description": "car_rental.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'users.User'\n# REST framework default authentication configuration\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),\n}",
+        "detail": "car_rental.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "car_rental.settings",
+        "description": "car_rental.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),\n}\nMIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -481,11 +587,20 @@
         "documentation": {}
     },
     {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "car_rental.settings",
+        "description": "car_rental.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': os.getenv('JWT_ACCESS_TOKEN_LIFETIME'),\n    'REFRESH_TOKEN_LIFETIME': os.getenv('JWT_REFRESH_TOKEN_LIFETIME'),\n    'ROTATE_REFRESH_TOKENS': os.getenv('JWT_ROTATE_REFRESH_TOKENS'),\n    'BLACKLIST_AFTER_ROTATION': os.getenv('JWT_BLACKLIST_AFTER_ROTATION'),\n    'AUTH_HEADER_TYPES': os.getenv('JWT_AUTH_HEADER_TYPES'),\n}",
+        "detail": "car_rental.settings",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "car_rental.urls",
         "description": "car_rental.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(car_rental.urls)),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n]",
         "detail": "car_rental.urls",
         "documentation": {}
     },
@@ -553,12 +668,57 @@
         "documentation": {}
     },
     {
+        "label": "UserManager",
+        "kind": 6,
+        "importPath": "users.models",
+        "description": "users.models",
+        "peekOfCode": "class UserManager(BaseUserManager):\n    def create_user(self, email, password=None, **extra_fields):\n        if not email:\n            raise ValueError(\"The Email field must be set\")\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)\n        user.set_password(password)\n        user.save(using=self._db)\n        return user\n    def create_superuser(self, email, password=None, **extra_fields):",
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "users.models",
+        "description": "users.models",
+        "peekOfCode": "class User(AbstractBaseUser, PermissionsMixin):\n    first_name = models.CharField(max_length=30)\n    last_name = models.CharField(max_length=30)\n    email = models.EmailField(unique=True)\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    objects = UserManager()\n    USERNAME_FIELD = 'email'\n    REQUIRED_FIELDS = ['first_name', 'last_name']\n    def __str__(self):",
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "kind": 6,
+        "importPath": "users.serializers",
+        "description": "users.serializers",
+        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = ['id', 'first_name', 'last_name', 'email',]",
+        "detail": "users.serializers",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "users.urls",
         "description": "users.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"index/\", views.index, name=\"home\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('register/', RegisterView.as_view(), name='register'),\n    path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),\n    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),\n    path('user/', UserDetailView.as_view(), name='user_detail'),\n]",
         "detail": "users.urls",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterView",
+        "kind": 6,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "class RegisterView(APIView):\n    permission_classes = [AllowAny]\n    def post(self, request):\n        serializer = RegisterSerializer(data=request.data)\n        if serializer.is_valid():\n            user = serializer.save()\n            return Response({'message': 'User registered successfully'}, status=status.HTTP_201_CREATED)\n        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)\nclass UserDetailView(APIView):\n    def get(self, request):",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserDetailView",
+        "kind": 6,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "class UserDetailView(APIView):\n    def get(self, request):\n        serializer = UserSerializer(request.user)\n        return Response(serializer.data)",
+        "detail": "users.views",
         "documentation": {}
     },
     {
