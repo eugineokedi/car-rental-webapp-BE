@@ -120,6 +120,14 @@
         "documentation": {}
     },
     {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -287,6 +295,14 @@
         "description": "django.contrib.auth",
         "isExtraImport": true,
         "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "payments.models",
+        "description": "payments.models",
+        "isExtraImport": true,
+        "detail": "payments.models",
         "documentation": {}
     },
     {
@@ -635,6 +651,15 @@
         "description": "payments.models",
         "peekOfCode": "status_choices = (\n    ('completed', 'Completed'),\n    ('pending', 'Pending'),\n    ('failed', 'Failed'),\n    ('refunded', 'Refunded'),\n    ('cancelled', 'Cancelled'),\n)\nclass Payment(models.Model):\n    # Relationship\n    rental = models.ForeignKey('Rental', on_delete=models.CASCADE, related_name='payments')",
         "detail": "payments.models",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentSerializer",
+        "kind": 6,
+        "importPath": "payments.serializers",
+        "description": "payments.serializers",
+        "peekOfCode": "class PaymentSerializer(serializers.ModelSerializer):\n    class Meta:\n        models = Payment\n        fields = \"__all__\"",
+        "detail": "payments.serializers",
         "documentation": {}
     },
     {
