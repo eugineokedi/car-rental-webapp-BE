@@ -233,6 +233,14 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "timedelta",
         "importPath": "datetime",
         "description": "datetime",
@@ -266,19 +274,11 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
         "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -287,6 +287,22 @@
         "description": "django.contrib.auth",
         "isExtraImport": true,
         "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -583,6 +599,42 @@
         "description": "payments.apps",
         "peekOfCode": "class PaymentsConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"payments\"",
         "detail": "payments.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "kind": 6,
+        "importPath": "payments.models",
+        "description": "payments.models",
+        "peekOfCode": "class Payment(models.Model):\n    # Relationship\n    rental = models.ForeignKey('Rental', on_delete=models.CASCADE, related_name='payments')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='payments')\n    # Payment details\n    amount_paid = models.DecimalField(max_digits=10, decimal_places=2)\n    payment_method = models.CharField(max_length=50, choices=payment_choices)\n    transaction_id = models.CharField(max_length=100, unique=True, null=True, blank=True)\n    payment_status = models.CharField(max_length=50, status=status_choices, default='Pending')\n    notes = models.TextField(null=True, blank=True)",
+        "detail": "payments.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "payments.models",
+        "description": "payments.models",
+        "peekOfCode": "User = get_user_model()\n# Create your models here.\npayment_choices = (\n    ('mpesa', 'Mpesa'),\n    ('card', 'Credit Card'),\n    ('Cash', 'Cash'),\n    ('transfer', 'Bank Transfer'),\n)\nstatus_choices = (\n    ('completed', 'Completed'),",
+        "detail": "payments.models",
+        "documentation": {}
+    },
+    {
+        "label": "payment_choices",
+        "kind": 5,
+        "importPath": "payments.models",
+        "description": "payments.models",
+        "peekOfCode": "payment_choices = (\n    ('mpesa', 'Mpesa'),\n    ('card', 'Credit Card'),\n    ('Cash', 'Cash'),\n    ('transfer', 'Bank Transfer'),\n)\nstatus_choices = (\n    ('completed', 'Completed'),\n    ('pending', 'Pending'),\n    ('failed', 'Failed'),",
+        "detail": "payments.models",
+        "documentation": {}
+    },
+    {
+        "label": "status_choices",
+        "kind": 5,
+        "importPath": "payments.models",
+        "description": "payments.models",
+        "peekOfCode": "status_choices = (\n    ('completed', 'Completed'),\n    ('pending', 'Pending'),\n    ('failed', 'Failed'),\n    ('refunded', 'Refunded'),\n    ('cancelled', 'Cancelled'),\n)\nclass Payment(models.Model):\n    # Relationship\n    rental = models.ForeignKey('Rental', on_delete=models.CASCADE, related_name='payments')",
+        "detail": "payments.models",
         "documentation": {}
     },
     {
