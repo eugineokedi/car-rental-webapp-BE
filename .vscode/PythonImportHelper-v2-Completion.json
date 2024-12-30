@@ -672,6 +672,15 @@
         "documentation": {}
     },
     {
+        "label": "RentalAdmin",
+        "kind": 6,
+        "importPath": "rental.admin",
+        "description": "rental.admin",
+        "peekOfCode": "class RentalAdmin(admin.ModelAdmin):\n    list_display = ('id', 'car', 'user', 'start_date', 'end_date', 'status')",
+        "detail": "rental.admin",
+        "documentation": {}
+    },
+    {
         "label": "RentalConfig",
         "kind": 6,
         "importPath": "rental.apps",
