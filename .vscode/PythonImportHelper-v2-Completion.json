@@ -16,6 +16,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -264,6 +280,22 @@
         "documentation": {}
     },
     {
+        "label": "method_decorator",
+        "importPath": "django.utils.decorators",
+        "description": "django.utils.decorators",
+        "isExtraImport": true,
+        "detail": "django.utils.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "cache_page",
+        "importPath": "django.views.decorators.cache",
+        "description": "django.views.decorators.cache",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.cache",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -404,6 +436,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cars.migrations.0002_alter_car_brand_alter_car_registration_number_and_more",
+        "description": "cars.migrations.0002_alter_car_brand_alter_car_registration_number_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"cars\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"car\",\n            name=\"brand\",\n            field=models.CharField(db_index=True, max_length=100),\n        ),",
+        "detail": "cars.migrations.0002_alter_car_brand_alter_car_registration_number_and_more",
+        "documentation": {}
+    },
+    {
         "label": "CarAdmin",
         "kind": 6,
         "importPath": "cars.admin",
@@ -426,7 +467,7 @@
         "kind": 6,
         "importPath": "cars.models",
         "description": "cars.models",
-        "peekOfCode": "class Car(models.Model):\n    brand = models.CharField(max_length=100)\n    model = models.CharField(max_length=255)\n    year = models.IntegerField()\n    registration_number = models.CharField(max_length=100)\n    description = models.TextField()\n    image = models.ImageField()\n    date_created = models.DateTimeField(auto_now_add=True)\n    date_updated = models.DateTimeField(auto_now=True)\n    def __str__(self):",
+        "peekOfCode": "class Car(models.Model):\n    brand = models.CharField(max_length=100, db_index=True)\n    model = models.CharField(max_length=255)\n    year = models.IntegerField(db_index=True)\n    registration_number = models.CharField(max_length=100, unique=True)\n    description = models.TextField()\n    image = models.ImageField()\n    date_created = models.DateTimeField(auto_now_add=True)\n    date_updated = models.DateTimeField(auto_now=True)\n    class Meta:",
         "detail": "cars.models",
         "documentation": {}
     },
@@ -453,7 +494,7 @@
         "kind": 6,
         "importPath": "cars.views",
         "description": "cars.views",
-        "peekOfCode": "class CarList(generics.ListCreateAPIView):\n    queryset = Car.objects.all()\n    serializer_class = CarSerializer\nclass CarDetails(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Car.objects.all()\n    serializer_class = CarSerializer",
+        "peekOfCode": "class CarList(generics.ListCreateAPIView):\n    queryset = Car.objects.all()\n    serializer_class = CarSerializer\n    @method_decorator(cache_page(60 * 60 * 2))\n    def dispatch(self, *args, **kwargs):\n        return super().dispatch(*args, **kwargs) \nclass CarDetails(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Car.objects.all()\n    serializer_class = CarSerializer",
         "detail": "cars.views",
         "documentation": {}
     },
@@ -525,7 +566,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),\n}\nMIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.CursorPagination',\n    'PAGE_SIZE': 10,\n}",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -580,6 +621,15 @@
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
         "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
+        "detail": "car_rental.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CACHES",
+        "kind": 5,
+        "importPath": "car_rental.settings",
+        "description": "car_rental.settings",
+        "peekOfCode": "CACHES = {\n    'default': {\n        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',\n        'LOCATION': 'unique-snowflake',\n    }\n}\n# Internationalization\n# https://docs.djangoproject.com/en/5.1/topics/i18n/\nLANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"",
         "detail": "car_rental.settings",
         "documentation": {}
     },
