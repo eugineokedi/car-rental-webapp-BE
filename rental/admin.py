@@ -1,7 +1,7 @@
-from django.contrib import admin
-from .rental import Rental
+from django.contrib import admin # type: ignore
+from .models import Rental
 
 # Register your models here.
-@admin.site.register(Rental)
+@admin.register(Rental)
 class RentalAdmin(admin.ModelAdmin):
-    list_display = ('id', 'car', 'user', 'start_date', 'end_date', 'status')
+    list_display = ('id', 'start_date', 'end_date', 'daily_rate', 'total_cost', 'notes')

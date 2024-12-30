@@ -1,78 +1,6 @@
 [
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "models",
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -93,6 +21,142 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -257,14 +321,6 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "users.serializers",
-        "description": "users.serializers",
-        "isExtraImport": true,
-        "detail": "users.serializers",
-        "documentation": {}
-    },
-    {
         "label": "car_rental,",
         "kind": 6,
         "isExtraImport": true,
@@ -282,22 +338,6 @@
         "documentation": {}
     },
     {
-        "label": "Payment",
-        "importPath": "payments.models",
-        "description": "payments.models",
-        "isExtraImport": true,
-        "detail": "payments.models",
-        "documentation": {}
-    },
-    {
-        "label": "Payment",
-        "importPath": "payments.models",
-        "description": "payments.models",
-        "isExtraImport": true,
-        "detail": "payments.models",
-        "documentation": {}
-    },
-    {
         "label": "get_user_model",
         "importPath": "django.contrib.auth",
         "description": "django.contrib.auth",
@@ -311,6 +351,14 @@
         "description": "django.contrib.auth",
         "isExtraImport": true,
         "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "payments.models",
+        "description": "payments.models",
+        "isExtraImport": true,
+        "detail": "payments.models",
         "documentation": {}
     },
     {
@@ -347,11 +395,20 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cars.migrations.0001_initial",
+        "description": "cars.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"Car\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
+        "detail": "cars.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
         "label": "CarAdmin",
         "kind": 6,
         "importPath": "cars.admin",
         "description": "cars.admin",
-        "peekOfCode": "class CarAdmin(admin.ModelAdmin):\n    list_display = ('id', 'car_brand', 'car_model', 'year', 'registration_number', 'image')",
+        "peekOfCode": "class CarAdmin(admin.ModelAdmin):\n    list_display = ('id', 'brand', 'model', 'year', 'registration_number', 'image')",
         "detail": "cars.admin",
         "documentation": {}
     },
@@ -369,7 +426,7 @@
         "kind": 6,
         "importPath": "cars.models",
         "description": "cars.models",
-        "peekOfCode": "class Car(models.Model):\n    car_brand = models.CharField(max_length=100)\n    car_model = models.CharField(max_length=255)\n    year = name = models.CharField(max_length=100)\n    registration_number = models.CharField(max_length=100)\n    description = models.TextField()\n    image = models.ImageField()\n    date_created = models.DateTimeField(auto_now_add=True)\n    date_updated = models.DateTimeField(auto_now=True)\n    def __str__(self):",
+        "peekOfCode": "class Car(models.Model):\n    brand = models.CharField(max_length=100)\n    model = models.CharField(max_length=255)\n    year = models.IntegerField()\n    registration_number = models.CharField(max_length=100)\n    description = models.TextField()\n    image = models.ImageField()\n    date_created = models.DateTimeField(auto_now_add=True)\n    date_updated = models.DateTimeField(auto_now=True)\n    def __str__(self):",
         "detail": "cars.models",
         "documentation": {}
     },
@@ -450,7 +507,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"payments\",",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"users\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -459,16 +516,7 @@
         "kind": 5,
         "importPath": "car_rental.settings",
         "description": "car_rental.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"payments\",\n    \"rental\",\n    \"users\",",
-        "detail": "car_rental.settings",
-        "documentation": {}
-    },
-    {
-        "label": "AUTH_USER_MODEL",
-        "kind": 5,
-        "importPath": "car_rental.settings",
-        "description": "car_rental.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'users.User'\n# REST framework default authentication configuration\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),\n}",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"users\",\n    \"payments\",\n    \"rental\",",
         "detail": "car_rental.settings",
         "documentation": {}
     },
@@ -626,11 +674,20 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "payments.migrations.0001_initial",
+        "description": "payments.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"Payment\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
+        "detail": "payments.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
         "label": "PaymentAdmin",
         "kind": 6,
         "importPath": "payments.admin",
         "description": "payments.admin",
-        "peekOfCode": "class PaymentAdmin(admin.ModelAdmin):\n    list_display = ('id', 'rental', 'user', 'amount_paid', 'payment_method', 'payment_status')",
+        "peekOfCode": "class PaymentAdmin(admin.ModelAdmin):\n    list_display = ('id', 'amount_paid', 'payment_method', 'payment_date', 'payment_status', 'notes')",
         "detail": "payments.admin",
         "documentation": {}
     },
@@ -648,7 +705,7 @@
         "kind": 6,
         "importPath": "payments.models",
         "description": "payments.models",
-        "peekOfCode": "class Payment(models.Model):\n    # Relationship\n    rental = models.ForeignKey('Rental', on_delete=models.CASCADE, related_name='payments')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='payments')\n    # Payment details\n    amount_paid = models.DecimalField(max_digits=10, decimal_places=2)\n    payment_method = models.CharField(max_length=50, choices=payment_choices)\n    transaction_id = models.CharField(max_length=100, unique=True, null=True, blank=True)\n    payment_status = models.CharField(max_length=50, status=status_choices, default='Pending')\n    notes = models.TextField(null=True, blank=True)",
+        "peekOfCode": "class Payment(models.Model):\n    # Relationship\n    # rental = models.ForeignKey('Rental', on_delete=models.CASCADE, related_name='payments')\n    # user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='payments')\n    # Payment details\n    amount_paid = models.DecimalField(max_digits=10, decimal_places=2)\n    payment_method = models.CharField(max_length=50, choices=payment_choices)\n    payment_date = models.DateTimeField(auto_now_add=True)\n    transaction_id = models.CharField(max_length=100, unique=True, null=True, blank=True)\n    payment_status = models.CharField(max_length=50, choices=status_choices, default='Pending')",
         "detail": "payments.models",
         "documentation": {}
     },
@@ -675,7 +732,7 @@
         "kind": 5,
         "importPath": "payments.models",
         "description": "payments.models",
-        "peekOfCode": "status_choices = (\n    ('completed', 'Completed'),\n    ('pending', 'Pending'),\n    ('failed', 'Failed'),\n    ('refunded', 'Refunded'),\n    ('cancelled', 'Cancelled'),\n)\nclass Payment(models.Model):\n    # Relationship\n    rental = models.ForeignKey('Rental', on_delete=models.CASCADE, related_name='payments')",
+        "peekOfCode": "status_choices = (\n    ('completed', 'Completed'),\n    ('pending', 'Pending'),\n    ('failed', 'Failed'),\n    ('refunded', 'Refunded'),\n    ('cancelled', 'Cancelled'),\n)\nclass Payment(models.Model):\n    # Relationship\n    # rental = models.ForeignKey('Rental', on_delete=models.CASCADE, related_name='payments')",
         "detail": "payments.models",
         "documentation": {}
     },
@@ -698,11 +755,20 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "rental.migrations.0001_initial",
+        "description": "rental.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"Rental\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
+        "detail": "rental.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
         "label": "RentalAdmin",
         "kind": 6,
         "importPath": "rental.admin",
         "description": "rental.admin",
-        "peekOfCode": "class RentalAdmin(admin.ModelAdmin):\n    list_display = ('id', 'car', 'user', 'start_date', 'end_date', 'status')",
+        "peekOfCode": "class RentalAdmin(admin.ModelAdmin):\n    list_display = ('id', 'start_date', 'end_date', 'daily_rate', 'total_cost', 'notes')",
         "detail": "rental.admin",
         "documentation": {}
     },
@@ -720,7 +786,7 @@
         "kind": 6,
         "importPath": "rental.models",
         "description": "rental.models",
-        "peekOfCode": "class Rental(models.Model):\n    # Relationship\n    car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    actual_return_date = models.DateField(null=True, blank=True)\n    booking_date = models.DateTimeField(auto_now_add=True)\n    # Rental cost",
+        "peekOfCode": "class Rental(models.Model):\n    # Relationship\n    # car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    # user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    actual_return_date = models.DateField(null=True, blank=True)\n    booking_date = models.DateTimeField(auto_now_add=True)\n    # Rental cost",
         "detail": "rental.models",
         "documentation": {}
     },
@@ -729,7 +795,7 @@
         "kind": 5,
         "importPath": "rental.models",
         "description": "rental.models",
-        "peekOfCode": "User = get_user_model()\n# Create your models here.\nclass Rental(models.Model):\n    # Relationship\n    car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    actual_return_date = models.DateField(null=True, blank=True)",
+        "peekOfCode": "User = get_user_model()\n# Create your models here.\nclass Rental(models.Model):\n    # Relationship\n    # car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')\n    # user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')\n    # Rental period\n    start_date = models.DateField()\n    end_date = models.DateField()\n    actual_return_date = models.DateField(null=True, blank=True)",
         "detail": "rental.models",
         "documentation": {}
     },
@@ -752,12 +818,12 @@
         "documentation": {}
     },
     {
-        "label": "UserAdmin",
+        "label": "Migration",
         "kind": 6,
-        "importPath": "users.admin",
-        "description": "users.admin",
-        "peekOfCode": "class UserAdmin(admin.ModelAdmin):\n    list_display = ('id', 'username', 'email', 'phone_number', 'password')",
-        "detail": "users.admin",
+        "importPath": "users.migrations.0001_initial",
+        "description": "users.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"User\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
+        "detail": "users.migrations.0001_initial",
         "documentation": {}
     },
     {
@@ -767,6 +833,15 @@
         "description": "users.apps",
         "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"users\"",
         "detail": "users.apps",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "users.models",
+        "description": "users.models",
+        "peekOfCode": "class User(models.Model):\n    pass",
+        "detail": "users.models",
         "documentation": {}
     },
     {

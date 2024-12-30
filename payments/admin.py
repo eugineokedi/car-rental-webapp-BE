@@ -1,8 +1,8 @@
 from django.contrib import admin # type: ignore
-from payments.models import Payment
-from . import Payment
+from .models import Payment
 
 # Register your models here.
-@admin.site.register(Payment)
+@admin.register(Payment)
 class PaymentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'rental', 'user', 'amount_paid', 'payment_method', 'payment_status')
+    list_display = ('id', 'amount_paid', 'payment_method', 'payment_date', 'payment_status', 'notes')
+

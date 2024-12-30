@@ -8,8 +8,8 @@ User = get_user_model()
 # Create your models here.
 class Rental(models.Model):
     # Relationship
-    car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')
+    # car = models.ForeignKey('Car', on_delete=models.CASCADE, related_name='rentals')
+    # user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rentals')
     
     # Rental period
     start_date = models.DateField()
