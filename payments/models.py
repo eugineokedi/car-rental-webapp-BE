@@ -22,8 +22,8 @@ status_choices = (
 )
 class Payment(models.Model):
     # Relationship
-    # rental = models.ForeignKey('Rental', on_delete=models.CASCADE, related_name='payments')
-    # user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='payments')
+    rental = models.ForeignKey('Rental', on_delete=models.CASCADE, related_name='payments')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='payments')
     
     # Payment details
     amount_paid = models.DecimalField(max_digits=10, decimal_places=2)
