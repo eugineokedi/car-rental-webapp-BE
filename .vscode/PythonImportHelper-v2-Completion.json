@@ -282,19 +282,11 @@
         "documentation": {}
     },
     {
-        "label": "get_user_model",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
+        "label": "Payment",
+        "importPath": "payments.models",
+        "description": "payments.models",
         "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "get_user_model",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
+        "detail": "payments.models",
         "documentation": {}
     },
     {
@@ -303,6 +295,22 @@
         "description": "payments.models",
         "isExtraImport": true,
         "detail": "payments.models",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -336,6 +344,15 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "CarAdmin",
+        "kind": 6,
+        "importPath": "cars.admin",
+        "description": "cars.admin",
+        "peekOfCode": "class CarAdmin(admin.ModelAdmin):\n    list_display = ('id', 'car_brand', 'car_model', 'year', 'registration_number', 'image')",
+        "detail": "cars.admin",
         "documentation": {}
     },
     {
@@ -609,6 +626,15 @@
         "documentation": {}
     },
     {
+        "label": "PaymentAdmin",
+        "kind": 6,
+        "importPath": "payments.admin",
+        "description": "payments.admin",
+        "peekOfCode": "class PaymentAdmin(admin.ModelAdmin):\n    list_display = ('id', 'rental', 'user', 'amount_paid', 'payment_method', 'payment_status')",
+        "detail": "payments.admin",
+        "documentation": {}
+    },
+    {
         "label": "PaymentsConfig",
         "kind": 6,
         "importPath": "payments.apps",
@@ -723,6 +749,15 @@
         "description": "rental.urls",
         "peekOfCode": "urlpatterns = [\n    path(),\n]",
         "detail": "rental.urls",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "kind": 6,
+        "importPath": "users.admin",
+        "description": "users.admin",
+        "peekOfCode": "class UserAdmin(admin.ModelAdmin):\n    list_display = ('id', 'username', 'email', 'phone_number', 'password')",
+        "detail": "users.admin",
         "documentation": {}
     },
     {
